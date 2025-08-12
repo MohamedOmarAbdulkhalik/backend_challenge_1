@@ -8,9 +8,12 @@
 </head>
 
 <body>
-    <h1> <?php echo "Today Date: " . date("Y-m-d");
+    <h1> 
+        <?php echo "Today Date: " . date("Y-m-d");
             echo "<br>";
-            echo "Time: " . date("H:i:s"); ?> </h1>
+            echo "Time: " . date("H:i:s"); ?> 
+    </h1>
+
 </body>
 
 </html>
