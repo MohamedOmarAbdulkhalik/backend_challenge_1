@@ -18,14 +18,13 @@
             $name = urlencode($_POST['name']);
             $color = urlencode($_POST['color']);
 
-            header("Location: result.php?name=$name&color=$color", true, 303);
+            header("Location: result.php?name={$name}&color={$color}", true, 303);
             exit();
         }
-
         ?>
     </h1>
     <br>
-    <form action="POST">
+    <form method="post" action="">
         <label for="name">Name:</label>
         <input type="text" name="name" id="">
         <br>
