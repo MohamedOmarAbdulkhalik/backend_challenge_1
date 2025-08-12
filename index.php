@@ -8,12 +8,32 @@
 </head>
 
 <body>
-    <h1> 
-        <?php echo "Today Date: " . date("Y-m-d");
-            echo "<br>";
-            echo "Time: " . date("H:i:s"); ?> 
-    </h1>
+    <h1>
+        <?php
+        echo "Today Date: " . date("Y-m-d");
+        echo "<br>";
+        echo "Time: " . date("H:i:s");
 
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $name = urlencode($_POST['name']);
+            $color = urlencode($_POST['color']);
+
+            header("Location: result.php?name=$name&color=$color", true, 303);
+            exit();
+        }
+
+        ?>
+    </h1>
+    <br>
+    <form action="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="">
+        <br>
+        <label for="color">Favorate color</label>
+        <input type="text" name="color" id="">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
