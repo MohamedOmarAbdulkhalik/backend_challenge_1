@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-$name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : 'Guest';
-$color = isset($_GET['color']) ? htmlspecialchars($_GET['color']) : 'Unknown';
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : 'Guest';
+$color = isset($_POST['color']) ? htmlspecialchars($_POST['color']) : 'Unknown';
 
 ?>
 <!DOCTYPE html>

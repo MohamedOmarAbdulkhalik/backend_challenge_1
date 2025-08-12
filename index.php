@@ -13,18 +13,10 @@
         echo "Today Date: " . date("Y-m-d");
         echo "<br>";
         echo "Time: " . date("H:i:s");
-
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
-            $name = urlencode($_POST['name']);
-            $color = urlencode($_POST['color']);
-
-            header("Location: result.php?name={$name}&color={$color}", true, 303);
-            exit();
-        }
         ?>
     </h1>
     <br>
-    <form method="post" action="">
+    <form method="post" action="result.php">
         <label for="name">Name:</label>
         <input type="text" name="name" id="">
         <br>
